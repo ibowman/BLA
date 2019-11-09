@@ -103,6 +103,11 @@ def main():
         help='Sort communities by average value of member rows',
         action='store_true')
 
+    parser.add_argument(
+        '-abc', '--alpha_community_rows',
+        help='Sort community rows rois alphabetically',
+        action='store_true')
+
     parser.add_argument('-dsn', '--draw_subnetwork',
                         help='Draw only the subnetwork specified')
 
@@ -141,6 +146,8 @@ def main():
     rankdir = args['rankdir']
 
     row_value_community_sort = args['row_value_community_sort']
+
+    alphabetize_rows = args['alpha_community_rows']
 
     draw_subnetwork = args['draw_subnetwork']
 
@@ -313,6 +320,11 @@ def main():
         else:
             (y_bounds, new_row_roi_indices) = bct.grid_communities(row_ci)
             (x_bounds, new_col_roi_indices) = bct.grid_communities(col_ci)
+
+        if alphabetize_rows:
+            new_row_roi_indices = \
+                cic_plot.alpha_row_roi_indices(
+                    row_roi_name_npa, new_row_roi_indices, row_ci)
 
         new_col_roi_name_npa = np.array(col_roi_name_npa[new_col_roi_indices])
         new_row_roi_name_npa = np.array(row_roi_name_npa[new_row_roi_indices])
