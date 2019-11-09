@@ -22,5 +22,5 @@ for lvl in $levels; do
     print_lvl=`printf "%0.3d" $lvl`
     job_name=cc${print_lvl}-${channel}-${name_base}
     log_name_base=$logs_dir/$job_name
-    qsub -N $job_name -cwd -o $log_name_base.out -e $log_name_base.err -q compute.q src/qsub_run_cmt_clr_thresh.sh $char_cmt_str_csv $case_dir $grid_cell_size $channel $lvl "$inj_site_colors" $venv_dir
+    qsub -l hostslots=2,h_vmem=16G -N $job_name -cwd -o $log_name_base.out -e $log_name_base.err -q compute.q src/qsub_run_cmt_clr_thresh.sh $char_cmt_str_csv $case_dir $grid_cell_size $channel $lvl "$inj_site_colors" $venv_dir
 done;

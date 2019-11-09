@@ -16,5 +16,5 @@ do
     logs_dir=qsub_logs
     job_name=cc-$name_base
     log_name_base=$logs_dir/${job_name}
-    qsub -N $job_name -cwd -q compute.q -o $log_name_base.out -e $log_name_base.err -l hostslots=1 src/qsub_char_cmt_str.sh $file "$inj_sites" $venv_dir
+    qsub -N $job_name -cwd -q compute.q -o $log_name_base.out -e $log_name_base.err -l hostslots=2,h_vmem=16G src/qsub_char_cmt_str.sh $file "$inj_sites" $venv_dir
 done
