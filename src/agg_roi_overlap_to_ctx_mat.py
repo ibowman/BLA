@@ -125,10 +125,11 @@ def main():
         source_only = int(row[agg_overlap_csv_header.index('ATLAS ONLY')])
 
         # only make and add lbl to dct if mtv overlap present and
-        #  hemi of interest or not checking hemi and
+        #  hemi of interest or not checking hemi or both hemi  and
         #  not excluding sections or section not excluded
         #  not roi exclusive or roi included
-        if ((not check_hemi or hemi == hemisphere_of_interest) and
+        if ((not check_hemi or hemi == hemisphere_of_interest or
+             hemisphere_of_interest == 'lr') and
             (not exclude_sections or
              "{}:{}".format(case, section) not in exclude_sections) and
             (not eir or
@@ -139,6 +140,10 @@ def main():
             # or that e.g. MO matches MOp but not MOB ^^^
             # first make 'roi' cell label
             roi_lbl = "{}".format(roi)
+
+            if hemisphere_of_interest == 'lr':
+                roi_lbl = "{}_{}".format(
+                    roi_lbl, 'ipsa' if hemi == 'r' else 'contra')
 
             # TODO change inj_site and other terminology to src vs. dest
             # build labels and dct lst
@@ -250,8 +255,8 @@ def main():
                     if overlap_tup is None:
                         print("no overlap tup for {}, {}".
                               format(src_lbl, dst_lbl))
-
-                if overlap_tup is not None and len(overlap_tup) > 0:
+                if overlap_tup is not None and len(overlap_tup) > 0 and \
+                        (overlap_tup[0] + overlap_tup[1]) > 0:
                     assert len(overlap_tup) == 2, \
                         "overlap tup: {}".format(overlap_tup)
                     source_only = overlap_tup[0]

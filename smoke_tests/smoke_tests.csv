@@ -33,6 +33,8 @@ src/agg_roi_overlap_to_ctx_mat.py -eir MO PL -i test_data/test_agg_roi_overlap_c
 src/agg_roi_overlap_to_ctx_mat.py -eir MO PL -mtv 0.004  -i test_data/test_agg_roi_overlap_csv.csv -o smoke_tests/mtv_eir_roi_right_hemi_agg_overlap_to_ctx_mat.csv -hemi r -v, smoke_tests/mtv_eir_roi_right_hemi_agg_overlap_to_ctx_mat.csv, smoke_tests/exp_mtv_eir_roi_right_hemi_agg_overlap_to_ctx_mat.csv
 # test ret convert agg ROI overlap to CTX mat with ACA eir, and mtv 0.000
 src/agg_roi_overlap_to_ctx_mat.py -eir ACA -mtv 0.000  -i test_data/test_ret_agg_roi_overlap_csv.csv -o smoke_tests/ret_mtv_eir_roi_right_hemi_agg_overlap_to_ctx_mat.csv -hemi r -v, smoke_tests/ret_mtv_eir_roi_right_hemi_agg_overlap_to_ctx_mat.csv, smoke_tests/exp_ret_mtv_eir_roi_right_hemi_agg_overlap_to_ctx_mat.csv
+# test convert aggregated ROI overlap to CTX mat with hemi lr
+src/agg_roi_overlap_to_ctx_mat.py -hemi lr -mtv 0.0000 -i test_data/test_ret_lr_hemi_roi_agg_overlap_csv.csv -o smoke_tests/ret_lr_hemi_roi_agg_overlap_to_ctx_mat.csv, smoke_tests/ret_lr_hemi_roi_agg_overlap_to_ctx_mat.csv, smoke_tests/exp_ret_lr_hemi_roi_agg_overlap_to_ctx_mat.csv
 # test ant convert aggregated ROI overlap to CTX mat with RAW PIXEL VALUE
 src/agg_roi_overlap_to_ctx_mat_bar_chart.py -i test_data/test_ant_agg_roi_overlap_csvx.csv -o smoke_tests/ant_agg_roi_overlap_ctx_mat_csv_raw.csv -hemi r -v, smoke_tests/ant_agg_roi_overlap_ctx_mat_csv_raw.csv, smoke_tests/exp_ant_agg_roi_overlap_ctx_mat_csv_raw.csv 
 # test convert ant and ret aggregated ROI overlap to ctx mat COMBINED BINARY

@@ -1,0 +1,16 @@
+(HEMISPHERE:R:G:B),ARA Level,ATLAS ONLY,Atlas Name,Atlas Version,Case Name,Channel Number,Connection Lens Version,Injection Site,OVERLAP,Overlap Format,Project Name,REGION,Secondary Injection Site,Seconday Injection Site,Slide Number,Threshold Adjusted,Tracer
+(l:31:156:86),034,282474,ARA,1,SW110516-01A,5,2.5.0,MOp_5,1,Region,SW110516-01A,MOs_6a,None,None,1_10,True,CTB-647 cell count
+(l:31:156:88),034,959234,ARA,1,SW110516-01A,5,2.5.0,MOp_5,6,Region,SW110516-01A,MOs_5,None,None,1_10,True,CTB-647 cell count
+(l:31:156:89),034,924091,ARA,1,SW110516-01A,5,2.5.0,MOp_5,2,Region,SW110516-01A,MOs_2/3,None,None,1_10,True,CTB-647 cell count
+(l:31:156:90),034,464963,ARA,1,SW110516-01A,5,2.5.0,MOp_5,0,Region,SW110516-01A,MOs_1,None,None,1_10,True,CTB-647 cell count
+(l:31:157:86),034,773585,ARA,1,SW110516-01A,5,2.5.0,MOp_5,2,Region,SW110516-01A,MOp_6a,None,None,1_10,True,CTB-647 cell count
+(l:31:157:88),034,1318453,ARA,1,SW110516-01A,5,2.5.0,MOp_5,3,Region,SW110516-01A,MOp_5,None,None,1_10,True,CTB-647 cell count
+(r:31:156:86),034,282471,ARA,1,SW110516-01A,5,2.5.0,MOp_5,4,Region,SW110516-01A,MOs_6a,None,None,1_10,True,CTB-647 cell count
+(r:31:156:88),034,959196,ARA,1,SW110516-01A,5,2.5.0,MOp_5,44,Region,SW110516-01A,MOs_5,None,None,1_10,True,CTB-647 cell count
+(r:31:156:89),034,924065,ARA,1,SW110516-01A,5,2.5.0,MOp_5,28,Region,SW110516-01A,MOs_2/3,None,None,1_10,True,CTB-647 cell count
+(r:31:156:90),034,464961,ARA,1,SW110516-01A,5,2.5.0,MOp_5,2,Region,SW110516-01A,MOs_1,None,None,1_10,True,CTB-647 cell count
+(r:31:157:86),034,773570,ARA,1,SW110516-01A,5,2.5.0,MOp_5,17,Region,SW110516-01A,MOp_6a,None,None,1_10,True,CTB-647 cell count
+(r:31:157:88),034,1318453,ARA,1,SW110516-01A,5,2.5.0,MOp_5,3,Region,SW110516-01A,MOp_5,None,None,1_10,True,CTB-647 cell count
+(l:31:156:88),034,491017,ARA,1,SW110516-01A,5,2.5.0,MOp_5,11,Region,SW110516-01A,MOs_5,None,None,1_10,True,CTB-647 cell count
+(r:0:156:113),034,213784,ARA,1,SW110516-01A,5,2.5.0,MOp_5,7,Region,SW110516-01A,GU_6a,None,None,1_10,True,CTB-647 cell count
+(r:31:156:88),034,490988,ARA,1,SW110516-01A,5,2.5.0,MOp_5,40,Region,SW110516-01A,MOs_5,None,None,1_10,True,CTB-647 cell count
