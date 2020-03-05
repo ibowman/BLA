@@ -3,6 +3,6 @@ bctpy==0.5.0
 numpy==1.13.0
 psutil
 opencv-python==3.3.0.10
-plotly
+chart-studio
 pydot==1.4.1
 matplotlib==2.2.4
