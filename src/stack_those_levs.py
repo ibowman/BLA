@@ -359,6 +359,17 @@ def main():
                 lvl_top_roi_lst_dct[lvl].append('')
 
     if verbose:
+        for inj_site in all_cmt_inj_sites:
+            lvl_roi_ovlp_dct = cmt_inj_site_lvl_dct[inj_site]
+            print("{}".format(inj_site))
+            for lvl in sorted(args.levels):
+                roi_ovlp_dct = lvl_roi_ovlp_dct[lvl]
+                print("-- lvl {} roi count {} total ovlp {} {}".
+                      format(lvl, len(roi_ovlp_dct),
+                             sum([roi_ovlp_dct[roi] for roi in roi_ovlp_dct]),
+                             lvl_top_roi_lst_dct[lvl]))
+
+    if verbose:
         print("making traces for each level...")
     # create traces, or levels that will be plotted as bars
     # first create the values
@@ -388,13 +399,15 @@ def main():
     # normalize traces to 100 %
     # get community from the first level
     # need to sort this too since cmt_trace_y_dct points to a list
-    for cmt_idx, cmt_inj_site in enumerate(all_cmt_inj_sites):
-        lvl_roi_ovlp_dct = cmt_inj_site_lvl_dct[cmt_inj_site]
-        for lvl in sorted(lvl_roi_ovlp_dct):
-                # normalize to 100% using level values
-                lvl_trace_y_dct[lvl][cmt_idx] = \
-                    (float(lvl_trace_y_dct[lvl][cmt_idx]) /
-                     cmt_trace_total_dct[lvl]) * 100.0
+    # for cmt_idx, cmt_inj_site in enumerate(all_cmt_inj_sites):
+    #     lvl_roi_ovlp_dct = cmt_inj_site_lvl_dct[cmt_inj_site]
+
+    #     for lvl in sorted(args.levels):
+    #         if lvl in lvl_roi_ovlp_dct:  # level not in every community
+    #             # normalize to 100% using level values
+    #             lvl_trace_y_dct[lvl][cmt_idx] = \
+    #                 (float(lvl_trace_y_dct[lvl][cmt_idx]) /
+    #                  cmt_trace_total_dct[lvl]) * 100.0
 
     if verbose:
         print("populating graph object and writing file...")
