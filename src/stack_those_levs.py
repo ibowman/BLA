@@ -388,7 +388,7 @@ def main():
                 lvl_trace_y_dct[lvl].append(
                     sum([float(roi_ovlp_dct[roi]) for roi in roi_ovlp_dct]))
                 cmt_trace_total_dct[cmt_inj_site] = (
-                    cmt_trace_total_dct[cmt_inj_site] + 
+                    cmt_trace_total_dct[cmt_inj_site] +
                     sum([float(roi_ovlp_dct[roi]) for roi in roi_ovlp_dct]))
             else:
                 # append 0 amount of trace
