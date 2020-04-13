@@ -271,10 +271,14 @@ def main():
                         agg_overlap_csv_header=agg_overlap_csv_header,
                         agg_overlap_csv_rows=agg_overlap_rows,
                         grid_tup_str=grid_tup_str)
-                    assert unsplit_roi_str is not None
-                    if focus_roi_lst is None or cic_plot.in_roi_lst(
+                    if unsplit_roi_str is None:
+                        print(
+                            "WARNING: no {} regions found for matrix entry {}"
+                            .format(agg_overlap_csv, grid_tup_str))
+                    if (unsplit_roi_str is not None and
+                        focus_roi_lst is None or cic_plot.in_roi_lst(
                             unsplit_roi_str,
-                            roi_str_lst=focus_roi_lst):
+                            roi_str_lst=focus_roi_lst)):
                         if verbose:
                             if lvl not in lvl_roi_ovlp_dct:
                                 print(
