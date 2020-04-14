@@ -273,8 +273,8 @@ def main():
                         grid_tup_str=grid_tup_str)
                     if unsplit_roi_str is None:
                         print(
-                            "WARNING: no {} regions found for matrix entry {}"
-                            .format(agg_overlap_csv, grid_tup_str))
+                            "WARNING: no entry for {} found in {}"
+                            .format(grid_tup_str, agg_overlap_csv))
                     if (unsplit_roi_str is not None and
                         focus_roi_lst is None or cic_plot.in_roi_lst(
                             unsplit_roi_str,
